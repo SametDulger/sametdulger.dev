@@ -152,27 +152,8 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Service Worker Registration for font caching
-              if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function() {
-                  // Check if sw.js exists before registering
-                  fetch('/sw.js', { method: 'HEAD' })
-                    .then(function(response) {
-                      if (response.ok) {
-                        return navigator.serviceWorker.register('/sw.js');
-                      } else {
-                        console.log('SW file not found, skipping registration');
-                        return Promise.reject('SW file not available');
-                      }
-                    })
-                    .then(function(registration) {
-                      console.log('SW registered: ', registration);
-                    })
-                    .catch(function(registrationError) {
-                      console.log('SW registration failed: ', registrationError);
-                    });
-                });
-              }
+              // Service Worker Registration - Temporarily disabled until GitHub Actions deploys
+              console.log('Service Worker registration temporarily disabled until GitHub Actions deployment completes');
 
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
