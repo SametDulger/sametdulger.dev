@@ -148,13 +148,10 @@ export default function RootLayout({
         {/* Security Meta Tags */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-        {/* Service Worker Registration and Google Analytics */}
+        {/* Google Analytics */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Service Worker Registration - Temporarily disabled until GitHub Actions deploys
-              console.log('Service Worker registration temporarily disabled until GitHub Actions deployment completes');
-
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
