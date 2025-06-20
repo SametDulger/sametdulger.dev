@@ -1,0 +1,121 @@
+# robots.txt for https://sametdulger.dev
+# Generated for perfect SEO optimization
+
+User-agent: *
+Allow: /
+Allow: /_next/static/
+Allow: /_next/image
+
+# Specific crawlers
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# 2025 AI Crawlers
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# 2025 New AI Search Engines
+User-agent: SearchGPT
+Allow: /
+
+User-agent: Bard-Google
+Allow: /
+
+User-agent: Bing-AI
+Allow: /
+
+User-agent: Gemini-Google
+Allow: /
+
+User-agent: AI-Search
+Allow: /
+
+User-agent: LLM-Crawler
+Allow: /
+
+# Block bad bots and security scanners
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: *
+Disallow: /.env
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /.next/
+Disallow: /out/
+Disallow: /*.log
+
+# Sitemap
+Sitemap: https://sametdulger.dev/sitemap.xml
+
+# Host directive
+Host: https://sametdulger.dev 
