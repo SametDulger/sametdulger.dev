@@ -10,7 +10,6 @@ const FONTS_TO_CACHE = [
 const CRITICAL_ASSETS = [
   '/',
   '/manifest.json',
-  '/_next/static/css/',
 ];
 
 self.addEventListener('install', (event) => {
