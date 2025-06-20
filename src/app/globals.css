@@ -10,6 +10,15 @@
   
   body {
     line-height: 1.6;
+    font-display: swap; /* Ensure font-display swap for all fonts */
+  }
+  
+  /* Font loading optimizations */
+  .font-optimized {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   /* Critical above-the-fold styles */

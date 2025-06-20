@@ -36,14 +36,19 @@ export function WebVitals() {
         break
     }
 
-    // Send to analytics (only for critical metrics)
+    // Send to analytics (only for critical metrics) with error handling
     if (typeof window !== 'undefined' && window.gtag && 
         ['LCP', 'FID', 'CLS', 'TTFB'].includes(metric.name)) {
-      window.gtag('event', metric.name, {
-        event_category: 'Web Vitals',
-        value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-        non_interaction: true,
-      })
+      try {
+        window.gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          non_interaction: true,
+        })
+      } catch (error) {
+        // Silently fail if analytics is blocked
+        console.debug('Analytics event failed (this is normal if ad blockers are enabled):', error)
+      }
     }
 
     // Performance monitoring for 2025 standards

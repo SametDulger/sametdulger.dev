@@ -2,21 +2,25 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { WebVitals } from './web-vitals';
+import { FontLoader } from './font-loader';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 
 const geist = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: "block",
+  display: "swap",
   preload: true,
-  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  adjustFontFallback: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
   display: "swap",
-  preload: false,
+  preload: true,
   fallback: ['Monaco', 'Consolas', 'Courier New', 'monospace'],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -134,7 +138,7 @@ export default function RootLayout({
         {/* Critical CSS Inline - TTFB optimization */}
         <style dangerouslySetInnerHTML={{
           __html: `
-            body{color:rgb(255,255,255);background:linear-gradient(to bottom,rgb(17,24,39),rgb(0,0,0));min-height:100vh;line-height:1.6}
+            body{color:rgb(255,255,255);background:linear-gradient(to bottom,rgb(17,24,39),rgb(0,0,0));min-height:100vh;line-height:1.6;font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
             .gradient-text{background:linear-gradient(to right,rgb(59,130,246),rgb(147,51,234));background-clip:text;color:transparent}
             .hero-section{min-height:100vh;min-height:100dvh}
             html{scroll-behavior:smooth}
@@ -144,27 +148,50 @@ export default function RootLayout({
         {/* Security Meta Tags */}
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
-        {/* Google Analytics - Ultra Optimized Loading */}
+        {/* Service Worker Registration and Google Analytics */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              // Service Worker Registration for font caching
+              if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                    console.log('SW registered: ', registration);
+                  }).catch(function(registrationError) {
+                    console.log('SW registration failed: ', registrationError);
+                  });
+                });
+              }
+
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               
-              // Ultra lazy load GA with requestIdleCallback
+              // Enhanced GA loading with error handling
               function loadGA() {
-                var script = document.createElement('script');
-                script.async = true;
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-NJE56Q841Y';
-                document.head.appendChild(script);
-                
-                script.onload = function() {
-                  gtag('config', 'G-NJE56Q841Y', {
-                    send_page_view: true,
-                    anonymize_ip: true
-                  });
-                };
+                try {
+                  var script = document.createElement('script');
+                  script.async = true;
+                  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-NJE56Q841Y';
+                  script.onerror = function() {
+                    console.warn('Google Analytics failed to load - this is normal if ad blockers are enabled');
+                  };
+                  document.head.appendChild(script);
+                  
+                  script.onload = function() {
+                    try {
+                      gtag('config', 'G-NJE56Q841Y', {
+                        send_page_view: true,
+                        anonymize_ip: true,
+                        cookie_flags: 'SameSite=None;Secure'
+                      });
+                    } catch (e) {
+                      console.warn('Google Analytics configuration failed:', e.message);
+                    }
+                  };
+                } catch (e) {
+                  console.warn('Google Analytics initialization failed:', e.message);
+                }
               }
               
               if ('requestIdleCallback' in window) {
@@ -188,9 +215,12 @@ export default function RootLayout({
       <body className={`${geist.variable} ${geistMono.variable} antialiased font-optimized`}>
         <a href="#main-content" className="skip-link">Skip to main content</a>
         <WebVitals />
-        <main id="main-content" className="min-h-screen">
-          {children}
-        </main>
+        <FontLoader />
+        <ErrorBoundary>
+          <main id="main-content" className="min-h-screen">
+            {children}
+          </main>
+        </ErrorBoundary>
       </body>
     </html>
   );
