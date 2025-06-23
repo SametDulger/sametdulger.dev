@@ -28,6 +28,7 @@ Personal portfolio website showcasing Full Stack Developer skills and projects.
 - **GitHub Actions** - CI/CD pipeline
 - **Custom Domain** - sametdulger.dev
 
+
 ## 📦 Installation
 
 ```bash
