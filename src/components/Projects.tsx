@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'SD_Turizm',
     description: 'Tourism management system with hotel, tour, and financial features.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Turizm',
     demo: '#',
     icon: FiMapPin,
@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'SD_Burger',
     description: 'Multi-branch burger restaurant management with menu and order system.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Burger',
     demo: '#',
     icon: FiShoppingBag,
@@ -26,7 +26,7 @@ const projects = [
   {
     title: 'SD_Hotel',
     description: 'Hotel management system with room booking and guest services.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Hotel',
     demo: '#',
     icon: FiHome,
@@ -35,7 +35,7 @@ const projects = [
   {
     title: 'SD_Ticaret',
     description: 'E-commerce platform with product management and sales tracking.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Ticaret',
     demo: '#',
     icon: FiShoppingCart,
@@ -44,7 +44,7 @@ const projects = [
   {
     title: 'SD_Sinema',
     description: 'Cinema management system with movie scheduling and ticket sales.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Sinema',
     demo: '#',
     icon: FiFilm,
@@ -53,7 +53,7 @@ const projects = [
   {
     title: 'SD_Tur',
     description: 'Travel agency system with booking and itinerary management.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Tur',
     demo: '#',
     icon: FiMapPin,
@@ -62,7 +62,7 @@ const projects = [
   {
     title: 'SD_IKYS',
     description: 'HR management system with employee and payroll features.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_IKYS',
     demo: '#',
     icon: FiUsers,
@@ -71,7 +71,7 @@ const projects = [
   {
     title: 'SD_Kolej',
     description: 'School management system with student and teacher features.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Kolej',
     demo: '#',
     icon: FiBookOpen,
@@ -80,7 +80,7 @@ const projects = [
   {
     title: 'SD_Restaurant',
     description: 'Restaurant management with order processing and inventory.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Restaurant',
     demo: '#',
     icon: FiHome,
@@ -89,7 +89,7 @@ const projects = [
   {
     title: 'SD_Fuar',
     description: 'Exhibition management platform with event planning features.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Fuar',
     demo: '#',
     icon: FiBriefcase,
@@ -98,7 +98,7 @@ const projects = [
   {
     title: 'SD_Ajans',
     description: 'Advertising agency system with client and portfolio management.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Ajans',
     demo: '#',
     icon: FiGlobe,
@@ -116,7 +116,7 @@ const projects = [
   {
     title: 'SD_Cafe',
     description: 'Cafe management system with order and menu management.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/SD_Cafe',
     demo: '#',
     icon: FiCoffee,
@@ -134,7 +134,7 @@ const projects = [
   {
     title: 'ECommerceApp',
     description: 'E-commerce application with product and user management.',
-    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'Entity Framework'],
+    technologies: ['C#', '.NET 9', 'ASP.NET Core', 'EF Core'],
     github: 'https://github.com/SametDulger/ECommerceApp',
     demo: '#',
     icon: FiShoppingBag,
