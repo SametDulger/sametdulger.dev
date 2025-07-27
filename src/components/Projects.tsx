@@ -180,7 +180,7 @@ export default function Projects() {
                   <p className="text-gray-400 mb-3 text-xs leading-relaxed line-clamp-2 md:line-clamp-3">{project.description}</p>
                   
                   <div className="flex flex-wrap gap-1 mb-4">
-                    {project.technologies.slice(0, 1).map((tech) => (
+                    {project.technologies.map((tech) => (
                       <span
                         key={tech}
                         className="px-1.5 py-0.5 text-xs md:px-2 md:py-1 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20"
@@ -188,11 +188,6 @@ export default function Projects() {
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 1 && (
-                      <span className="px-1.5 py-0.5 text-xs md:px-2 md:py-1 bg-gray-500/10 text-gray-400 rounded-full border border-gray-500/20">
-                        +{project.technologies.length - 1}
-                      </span>
-                    )}
                   </div>
                 </div>
                 
