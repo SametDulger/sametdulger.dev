@@ -50,7 +50,7 @@ const skillGroups = [
     name: 'Database & Tools',
     skills: [
       { name: 'SQL Server', level: 7 },
-      { name: 'Entity Framework', level: 7 },
+      { name: 'EF Core', level: 7 },
       { name: 'Git', level: 7 },
       { name: 'Docker', level: 5 },
     ],
