@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { FiArrowDown, FiGithub, FiLinkedin } from 'react-icons/fi'
-import { FaXTwitter } from 'react-icons/fa6'
 
 const socialLinks = [
   {
@@ -15,11 +14,7 @@ const socialLinks = [
     icon: FiLinkedin,
     url: 'https://www.linkedin.com/in/SametDulger/',
   },
-  {
-    name: 'X (Twitter)',
-    icon: FaXTwitter,
-    url: 'https://x.com/_SametDlgr',
-  },
+
 ]
 
 export default function Hero() {
