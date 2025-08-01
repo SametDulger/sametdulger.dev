@@ -82,7 +82,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Samet Dulger - Full Stack Developer | .NET & React Expert",
     description: "Full Stack Developer specializing in .NET, React, and modern web technologies. Professional software development services.",
-    creator: "@_SametDlgr",
     images: ["https://sametdulger.dev/og-image.jpg"],
   },
 
