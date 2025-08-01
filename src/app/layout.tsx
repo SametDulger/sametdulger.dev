@@ -89,7 +89,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://sametdulger.dev",
   },
-    category: "Technology",
+  category: "Technology",
 };
 
 // Optimized structured data - reduced size for better TTFB
@@ -107,8 +107,7 @@ const structuredData = {
   },
   "sameAs": [
     "https://github.com/SametDulger",
-    "https://www.linkedin.com/in/sametdulger/",
-    "https://x.com/_SametDlgr"
+    "https://www.linkedin.com/in/sametdulger/"
   ],
   "knowsAbout": [".NET", "C#", "React", "JavaScript", "TypeScript", "ASP.NET Core"],
   "hasCredential": ["IBM JavaScript Developer", "Microsoft Back-End Developer"]

@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
-import { FaXTwitter } from 'react-icons/fa6'
 
 
 const socialLinks = [
@@ -18,12 +17,7 @@ const socialLinks = [
     url: 'https://www.linkedin.com/in/SametDulger/',
     username: 'linkedin.com/in/SametDulger',
   },
-  {
-    name: 'X (Twitter)',
-    icon: FaXTwitter,
-    url: 'https://x.com/_SametDlgr',
-    username: 'x.com/_SametDlgr',
-  },
+
 ]
 
 
@@ -38,7 +32,7 @@ export default function Contact() {
         <div className="flex justify-center">
           <div className="w-full max-w-4xl">
             <h3 className="text-3xl font-bold mb-8 text-white text-center">Links</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {socialLinks.map((link, index) => (
                 <motion.div
                   key={link.name}
