@@ -16,19 +16,6 @@ const experiences = [
       'Collaborated with development teams for system optimization',
     ],
   },
-  {
-    title: 'Jr. Software Developer',
-    company: 'Tailormade Information Systems',
-    location: 'Istanbul, Turkey',
-    period: 'July 2023 - May 2024',
-    type: 'work',
-    description: [
-      'Developed software solutions using .NET framework',
-      'Participated in code reviews and team collaboration',
-      'Gained 1 year of professional programming experience',
-      'Worked on new project launches and existing software management',
-    ],
-  },
 ]
 
 const education = [
